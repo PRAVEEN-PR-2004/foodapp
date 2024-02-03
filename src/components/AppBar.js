@@ -2,9 +2,8 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-
-
 import './AppBar.css';
+import Cart from './Cart';
 const AppBar = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
@@ -17,7 +16,7 @@ const AppBar = () => {
           <Nav.Link href="#menu" className='fw-bold'>Menu</Nav.Link>
           <Nav.Link href="#musttry" className='fw-bold'>Must try</Nav.Link>
           <Nav.Link href="#contact" className='fw-bold'>Contact us</Nav.Link>
-          
+          <Cart/>
         </Nav>
       </Navbar.Collapse>
     </Container>
