@@ -37,7 +37,7 @@ export const MenuCard = (props) => {
   const { productName, price, productImage} = props.data;
   return (
     <>
-    <Card className='mt-3' >
+    <Card className='mt-3 mb-3' >
       <Card.Img variant="top" src={productImage} />
       <Card.Body>
         <Card.Title>{productName}</Card.Title>
