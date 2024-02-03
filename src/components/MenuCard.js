@@ -38,7 +38,7 @@ export const MenuCard = (props) => {
   return (
     <>
     <Card className='mt-3 mb-3' >
-      <Card.Img variant="top" src={productImage} />
+      <Card.Img variant="top" src={productImage} alt=''/>
       <Card.Body>
         <Card.Title>{productName}</Card.Title>
         <Card.Text>

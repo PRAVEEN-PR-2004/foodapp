@@ -16,7 +16,7 @@ const MustTry = () => {
             <Col md={7}>
                 <Image 
                 src={require('../assets/br.jpg')}
-                fluid={true} alt='pick of the week' rounded></Image>
+                fluid={true} alt='' rounded></Image>
             </Col>
             <Col md={5}>
                 <div>
