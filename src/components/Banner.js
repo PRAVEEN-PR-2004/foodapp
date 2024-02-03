@@ -12,7 +12,7 @@ function Banner() {
               <img
                 className='d-block w-100'
                 src={require('../assets/br.jpg')}
-                alt='Hyderabadi Biryani'
+                alt=''
               />
               <Carousel.Caption>
                 <h3>HYDERABADI BIRYANI</h3>
@@ -25,7 +25,7 @@ function Banner() {
               <img
                 className='d-block w-100'
                 src={require('../assets/b.jpg')}
-                alt='DUM BIRIYANI'
+                alt=''
               />
               <Carousel.Caption>
                 <h3>DUM BIRIYANI</h3>
@@ -38,7 +38,7 @@ function Banner() {
               <img
                 className='d-block w-100'
                 src={require('../assets/d.jpg')}
-                alt='AMBUR BIRYANI'
+                alt=''
               />
               <Carousel.Caption>
                 <h3>AMBUR BIRYANI</h3>
