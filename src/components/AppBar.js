@@ -6,7 +6,7 @@ import './AppBar.css';
 import Cart from './Cart';
 const AppBar = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary sticky-top">
     <Container>
       <Navbar.Brand href="#home"><h2 id='heading'><span>I <i class="bi bi-heart-fill"></i> BIRIYANI</span></h2></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
