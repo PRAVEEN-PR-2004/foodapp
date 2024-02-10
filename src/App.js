@@ -6,6 +6,7 @@ import Banner from './components/Banner';
 import Menu from './components/Menu';
 import MustTry from './components/MustTry';
 import Comments from './components/Comments';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
     <Menu/>
     <MustTry/>
     <Comments/>
-    <div className='text-center my-3 text-dark small'>copyright 2022-2024</div>
+    <Footer/>
+    
     </>
   );
 }

@@ -16,15 +16,13 @@ export const MenuCard = (props) => {
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            Modal heading
+           ORDER RECEIVED
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4>Centered Modal</h4>
+          <h4>{productName}</h4>
           <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros.
+          Thank you for your order! You'll receive a delicious meal from us soon. We appreciate your support
           </p>
         </Modal.Body>
         <Modal.Footer>
@@ -34,7 +32,7 @@ export const MenuCard = (props) => {
     );
   }
   
-  const { productName, price, productImage} = props.data;
+  const { productName, price, productImage,content} = props.data;
   return (
     <>
     <Card className='mt-3 mb-3' >
@@ -42,8 +40,9 @@ export const MenuCard = (props) => {
       <Card.Body>
         <Card.Title>{productName}</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.{price}
+          {content}
+          <br></br>
+         <p className='text-center bold'>PRICE:{price}</p>
         </Card.Text>
         <div className='text-center'>
 

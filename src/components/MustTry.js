@@ -7,7 +7,7 @@ import ToastContainer from 'react-bootstrap/ToastContainer';
 const MustTry = () => {
     const[show, setShow] = useState(false);
   return (
-   <section id='musttry' className='my-3'>
+    <section id='musttry' className='my-3'>
     <div className='text-center my-2 py-3'>
         <h2 className='display-5'  style={{ color: "red" }}><i class="bi bi-search-heart"></i>PICK OF THE WEEK!</h2>
     </div>
@@ -15,13 +15,13 @@ const MustTry = () => {
         <Row className='align-items-center'>
             <Col md={7}>
                 <Image 
-                src={require('../assets/br.jpg')}
+                src={require('../assets/bucket biryani.jpg')}
                 fluid={true} alt='' rounded></Image>
             </Col>
             <Col md={5}>
                 <div>
                     <h2 className="h1">BUCKET BIRYANI</h2>
-                    <p className='text-muted lead'>Loremlorelknn remlorelknn LoLoremlo LoLoremlorelknn Lremlorelknn Lorem</p>
+                    <p className='text-muted lead'>Enjoy a feast fit for royalty with our bucket biryani, brimming with fragrant rice and succulent meat, offering a convenient and indulgent dining experience perfect for sharing with loved ones</p>
                     <Button  style={{ background: "red",border: "none" }}
                     onClick={()=> setShow(true)}>
                         <i class="bi bi-basket-fill"></i>buy now</Button>

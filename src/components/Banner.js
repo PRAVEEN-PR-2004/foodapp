@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 function Banner() {
   return (
-    <Container fluid className='mt-3'>
+    <Container fluid  className='mt-3'>
       <Row className='justify-content-center align-item-center'>
         <Col lg={8}>
           <Carousel>
@@ -15,9 +15,9 @@ function Banner() {
                 alt=''
               />
               <Carousel.Caption>
-                <h3>HYDERABADI BIRYANI</h3>
+                <h3>BIRYANI</h3>
                 <p className='d-none d-sm-block'>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
+                Indulge in the irresistible flavors of our authentic biryani, a true delight for your taste buds.
                 </p>
               </Carousel.Caption>
             </Carousel.Item>
@@ -28,9 +28,9 @@ function Banner() {
                 alt=''
               />
               <Carousel.Caption>
-                <h3>DUM BIRIYANI</h3>
+                <h3>sauce</h3>
                 <p className='d-none d-sm-block'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Experience richness in every bite with our savory gravies
                 </p>
               </Carousel.Caption>
             </Carousel.Item>
@@ -41,9 +41,9 @@ function Banner() {
                 alt=''
               />
               <Carousel.Caption>
-                <h3>AMBUR BIRYANI</h3>
+                <h3>DESSERTS</h3>
                 <p className='d-none d-sm-block'>
-                  Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                Satisfy your sweet cravings with our decadent desserts
                 </p>
               </Carousel.Caption>
             </Carousel.Item>
@@ -53,7 +53,7 @@ function Banner() {
       <div className='text-center'>
         <h2 className='display-5 mt-3'>BIRIYANI For Every Occasion!</h2>
         <p className='lead text-muted'>
-          Lorem Loremlorelknn sanleonfg vsln.ew asdkk i am praveen form thiruthurai poondi
+        A tantalizing experience awaits at our shop - where every bite is a journey through tradition and taste.
         </p>
       </div>
     </Container>
