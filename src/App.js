@@ -7,17 +7,19 @@ import Menu from './components/Menu';
 import MustTry from './components/MustTry';
 import Comments from './components/Comments';
 import Footer from './components/Footer';
+import {ShopContextProvider } from './context/shop-context';
 
 function App() {
   return (
     <>
+    <ShopContextProvider>
     <AppBar/>
     <Banner/>
     <Menu/>
     <MustTry/>
     <Comments/>
     <Footer/>
-    
+    </ShopContextProvider>
     </>
   );
 }

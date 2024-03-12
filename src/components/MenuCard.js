@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
+import { ShopContext } from '../context/shop-context';
 
 export const MenuCard = (props) => {
 
   const [modalShow, setModalShow] = React.useState(false);
+  const {addToCart} = useContext(ShopContext);
   function MyVerticallyCenteredModal(props) {
     return (
       <Modal
@@ -32,7 +34,7 @@ export const MenuCard = (props) => {
     );
   }
   
-  const { productName, price, productImage,content} = props.data;
+  const {id, productName, price, productImage,content} = props.data;
   return (
     <>
     <Card className='mt-3 mb-3' >
@@ -46,7 +48,7 @@ export const MenuCard = (props) => {
         </Card.Text>
         <div className='text-center'>
 
-          <Button  style={{background : "red",border:"none" }} onClick={() => setModalShow(true)}>Add to basket</Button>
+          <Button  style={{background : "red",border:"none" }} onClick={() => {setModalShow(true); addToCart(id)}}>Add to basket</Button>
         </div>
       </Card.Body>
     </Card>
