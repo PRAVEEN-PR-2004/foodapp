@@ -19,14 +19,14 @@ export const PRODUCTS =
         id: 2,
         productName: "CHICKEN-BIRYANI",
         price:"150",
-        content:"Indulge in the succulent flavors of our chicken biryani, expertly crafted with tender meat and aromatic spices, offering a taste of culinary excellence in every last forkful",
+        content:"Indulge in the succulent flavors of our chicken biryani, expertly crafted with tender meat and aromatic spices, offering a taste of culinary excellence ",
         productImage:product2,
     },
     {
         id: 3,
         productName: "EGG-GRAVY",
         price:"110",
-        content:"Savor the creamy goodness of our egg gravy, a delectable blend of boiled eggs simmered in a rich and flavorful sauce, offering a delightful culinary experience for egg lovers.",
+        content:"Savor the creamy goodness of our egg gravy, a delectable blend of boiled eggs simmered in a rich and flavorful sauce, offering a delightful culinary experience.",
         productImage:product3,
     },
     {

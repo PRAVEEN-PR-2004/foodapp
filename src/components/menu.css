@@ -1,0 +1,34 @@
+.menu-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Add transition effect */
+  }
+  
+  .menu-card:hover {
+    transform: translateY(-5px); /* Adjust the transformation on hover */
+  }
+  
+  .product-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .price {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .content {
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  @media (min-width: 768px) {
+    .menu-card {
+      width: 300px; /* Adjust width for large screens */
+      margin: 0 auto; /* Center align the card */
+    }
+  }
+  

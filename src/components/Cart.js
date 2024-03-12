@@ -54,7 +54,7 @@ const Cart = () => {
             return null;
           })}
           <div className='text-end mt-3'>
-            <Button style={{ background: "red", border: "none" }} onClick={() => setModalShow(true)}>BUY</Button>
+            <Button style={{ background: "red", border: "none" }} onClick={() => setModalShow(true)} className="w-100">BUY</Button> {/* Added w-100 class */}
           </div>
         </Offcanvas.Body>
       </Offcanvas>
