@@ -4,14 +4,39 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import Orders from './Orders';
 import { ShopContext } from '../context/shop-context';
 import { PRODUCTS } from './products';
-import Toast from 'react-bootstrap/Toast';
-import ToastContainer from 'react-bootstrap/ToastContainer';
+import Modal from 'react-bootstrap/Modal'; // Import Modal component
 
 const Cart = () => {
   const [show, setShow] = useState(false);
   const { cartItems } = useContext(ShopContext);
-  const [showOrder, setShowOrder] = useState(false);
+  const [modalShow, setModalShow] = useState(false);
 
+  // Define your modal component
+  function MyVerticallyCenteredModal2(props) {
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+           ORDER RECEIVED
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>
+            Thank you for your order! You'll receive a delicious meal from us soon. We appreciate your support.
+          </p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={props.onHide}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+    );
+  }
+  
   return (
     <>
       <Button variant="light" onClick={() => setShow(!show)} className="me-2">
@@ -29,28 +54,14 @@ const Cart = () => {
             return null;
           })}
           <div className='text-end mt-3'>
-            <Button style={{ background: "red", border: "none" }} onClick={() => setShowOrder(true)}>BUY</Button>
+            <Button style={{ background: "red", border: "none" }} onClick={() => setModalShow(true)}>BUY</Button>
           </div>
         </Offcanvas.Body>
       </Offcanvas>
-      <ToastContainer
-        className="p-3 position-fixed bottom-0 end-0"
-        position="middle-center" // Corrected position value
-        style={{ zIndex: 1 }}
-      >
-        <Toast onClose={() => setShowOrder(false)} show={showOrder} delay={3000} autohide>
-          <Toast.Header closeButton={false}>
-            <img
-              src="holder.js/20x20?text=%20"
-              className="rounded me-2"
-              alt=""
-            />
-            <strong className="me-auto">ADDED</strong>
-            <small>just now</small>
-          </Toast.Header>
-          <Toast.Body>WE RECEIVE YOUR ORDER</Toast.Body>
-        </Toast>
-      </ToastContainer>
+      <MyVerticallyCenteredModal2
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
     </>
   );
 }
