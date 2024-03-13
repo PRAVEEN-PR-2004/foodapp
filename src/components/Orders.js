@@ -23,7 +23,9 @@ const Orders = (props) => {
         </ListGroup.Item>
         <button className="btn btn-dark" onClick={() => removeFromCart(id)}>Remove</button>
       </ListGroup>
+
     </>
+      
   );
 }
 

@@ -5,7 +5,7 @@ import AppBar from './components/AppBar';
 import Banner from './components/Banner';
 import Menu from './components/Menu';
 import MustTry from './components/MustTry';
-import Comments from './components/Comments';
+import Location from './components/Location';
 import Footer from './components/Footer';
 import {ShopContextProvider } from './context/shop-context';
 
@@ -17,7 +17,7 @@ function App() {
     <Banner/>
     <Menu/>
     <MustTry/>
-    <Comments/>
+    <Location/>
     <Footer/>
     </ShopContextProvider>
     </>

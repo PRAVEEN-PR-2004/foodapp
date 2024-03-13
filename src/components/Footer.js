@@ -9,13 +9,13 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-logo">
-        <p>I <i className="bi bi-heart-fill"></i> BIRIYANI</p>
+        <p>Al-Thaani Halal</p>
       </div>
       <ul className="footer-link">
         <li><a href="#home">Home</a></li>
         <li><a href="#menu">Menu</a></li>
         <li><a href="#musttry">Must try</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#location">Location</a></li>
       </ul>
       <div className="footer-social-icon">
         <div className="footer-icons">

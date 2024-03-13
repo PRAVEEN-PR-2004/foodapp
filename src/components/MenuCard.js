@@ -36,19 +36,19 @@ function MyVerticallyCenteredModal(props) {
   return (
     <Modal
       {...props}
-      size="lg"
+      size="sm"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          ORDER RECEIVED
+          ITEM ADD TO CART
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <h4>{props.productName}</h4>
         <p>
-          Thank you for your order! You'll receive a delicious meal from us soon. We appreciate your support
+          Go to cart to buy your food.
         </p>
       </Modal.Body>
       <Modal.Footer>

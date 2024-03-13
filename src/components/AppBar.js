@@ -8,14 +8,14 @@ const AppBar = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary sticky-top">
     <Container>
-      <Navbar.Brand href="#home"><h2 id='heading'><span>I <i class="bi bi-heart-fill"></i> BIRIYANI</span></h2></Navbar.Brand>
+      <Navbar.Brand href="#home"><h2 id='heading'><span>Al-Thaani Halal</span></h2></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
         <Nav >
           <Nav.Link href="#home" className='fw-bold'>Home</Nav.Link>
           <Nav.Link href="#menu" className='fw-bold'>Menu</Nav.Link>
           <Nav.Link href="#musttry" className='fw-bold'>Must try</Nav.Link>
-          <Nav.Link href="#contact" className='fw-bold'>Contact us</Nav.Link>
+          <Nav.Link href="#location" className='fw-bold'>Location</Nav.Link>
           <Cart/>
         </Nav>
       </Navbar.Collapse>

@@ -18,20 +18,19 @@ const MustTry = () => {
       <Container>
         <Row className='align-items-center'>
           <Col md={7}>
-            <div className="image-container">
+            <div className="image-container mb-4">
               <Image
-                src={require('../assets/bucket biryani.jpg')}
-                fluid={true} alt='' rounded
+                src={require('../assets/parotta.jpg')}
+                fluid={true} alt='' thumbnail
               />
             </div>
           </Col>
           <Col md={5}>
             <div>
-              <h2 className="h1" style={{ fontWeight: "bold" }}>BUCKET BIRYANI</h2>
+              <h2 className="h1" style={{ fontWeight: "bold" }}>PAROTTA</h2>
               <p className='text-muted lead medium-font' style={{ color: "#6c757d" }}>
-  Enjoy a feast fit for royalty with our bucket biryani, brimming with fragrant rice and succulent meat, offering a convenient and indulgent dining experience perfect for sharing with loved ones
-</p>
-
+                Savor the soft and flaky layers of our freshly made Parotta, a popular South Indian flatbread. Enjoy it with your favorite curry or side dish for a satisfying meal that promises to delight your taste buds.
+              </p>
             </div>
           </Col>
         </Row>
