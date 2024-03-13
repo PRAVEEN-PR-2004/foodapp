@@ -10,6 +10,23 @@ const Cart = () => {
   const [show, setShow] = useState(false);
   const { cartItems, username } = useContext(ShopContext);
   const [modalShow, setModalShow] = useState(false);
+  const calculateTotalPrice = () => {
+    let totalPrice = 0;
+    PRODUCTS.forEach(product => {
+      totalPrice += cartItems[product.id] * product.price;
+    });
+    return totalPrice;
+  };
+  const handleBuy = () => {
+   const tprice = calculateTotalPrice();
+    if (username !== 'you' && tprice !==0) {
+      setModalShow(true);
+    }
+    else
+    {
+      window.alert('Please login or make a purchase befor buy.');
+    }
+  };
 
   // Define your modal component
   function MyVerticallyCenteredModal2(props) {
@@ -29,7 +46,8 @@ const Cart = () => {
         <p>
           Thank you for your order! You'll receive a delicious meal from us soon. We appreciate your support.
         </p>
-        <p className="text-muted mt-2"><strong>Note:</strong> Cash on delivery only</p>
+        <p className="text-muted mt-2"><strong>Note:</strong> Cash on delivery only. Total Price: ${calculateTotalPrice().toFixed(2)}<br></br></p>
+        
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide} className='btn btn-danger'>Close</Button>
@@ -38,15 +56,7 @@ const Cart = () => {
     );
   }
 
-  const handleBuy = () => {
-    if (username !== 'you') {
-      setModalShow(true);
-    }
-    else
-    {
-      window.alert('Please login before making a purchase.');
-    }
-  };
+  
 
   return (
     <>
@@ -64,7 +74,7 @@ const Cart = () => {
             }
             return null;
           })}
-          <h5 className="text-center mt-3">Total Price: $0.00</h5>
+          <h5 className="text-center mt-3">Total Price: ${calculateTotalPrice().toFixed(2)}</h5>
           <div className='text-end mt-3'>
             <Button style={{ background: "red", border: "none" }} onClick={handleBuy} className="w-100">BUY</Button>
           </div>
