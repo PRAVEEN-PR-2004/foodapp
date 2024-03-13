@@ -4,11 +4,11 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import Orders from './Orders';
 import { ShopContext } from '../context/shop-context';
 import { PRODUCTS } from './products';
-import Modal from 'react-bootstrap/Modal'; // Import Modal component
+import Modal from 'react-bootstrap/Modal';
 
 const Cart = () => {
   const [show, setShow] = useState(false);
-  const { cartItems } = useContext(ShopContext);
+  const { cartItems, username } = useContext(ShopContext);
   const [modalShow, setModalShow] = useState(false);
 
   // Define your modal component
@@ -20,23 +20,34 @@ const Cart = () => {
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-           ORDER RECEIVED
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <p>
-            Thank you for your order! You'll receive a delicious meal from us soon. We appreciate your support.
-          </p>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={props.onHide}>Close</Button>
-        </Modal.Footer>
+         <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          ORDER RECEIVED
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <p>
+          Thank you for your order! You'll receive a delicious meal from us soon. We appreciate your support.
+        </p>
+        <p className="text-muted mt-2"><strong>Note:</strong> Cash on delivery only</p>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide} className='btn btn-danger'>Close</Button>
+      </Modal.Footer>
       </Modal>
     );
   }
-  
+
+  const handleBuy = () => {
+    if (username !== 'you') {
+      setModalShow(true);
+    }
+    else
+    {
+      window.alert('Please login before making a purchase.');
+    }
+  };
+
   return (
     <>
       <Button variant="light" onClick={() => setShow(!show)} className="me-2">
@@ -55,7 +66,7 @@ const Cart = () => {
           })}
           <h5 className="text-center mt-3">Total Price: $0.00</h5>
           <div className='text-end mt-3'>
-            <Button style={{ background: "red", border: "none" }} onClick={() => setModalShow(true)} className="w-100">BUY</Button> {/* Added w-100 class */}
+            <Button style={{ background: "red", border: "none" }} onClick={handleBuy} className="w-100">BUY</Button>
           </div>
         </Offcanvas.Body>
       </Offcanvas>
